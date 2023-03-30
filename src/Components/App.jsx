@@ -1,24 +1,11 @@
-import './App.css';
+import './styles/App.css';
 import Typewriter from "typewriter-effect";
 import React, { useState, useEffect } from 'react';
 import Papa from "papaparse";
+import DelayedButton from "./DelayedButton";
 
-function DelayedButton() {
-  const [showButton, setShowButton] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowButton(true);
-    }, 28000);
-  }, []);
-
-  return (
-    <div>
-      {showButton && <button class="button-52">Delayed Button</button>}
-    </div>
-  );
-}
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
