@@ -1,4 +1,4 @@
-.App {
+.Typewriter {
   font-family: sans-serif;
   font-weight:800;
   font-size:40px;
@@ -9,4 +9,19 @@
   align-items:center;
   min-height:100vh;
   background:#e07a5f;
+}
+.button-52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  touch-action: manipulation;
+  position: absolute;
+  top: 50%;
+  left: 41.5%;
+  margin: 50px;
 }
