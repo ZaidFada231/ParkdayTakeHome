@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import {Navigate} from 'react-router-dom';
-import $ from 'jquery';
 
 function DelayedButton() {
   const [showButton, setShowButton] = useState(false);

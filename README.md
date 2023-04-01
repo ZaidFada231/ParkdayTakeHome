@@ -1,70 +1,16 @@
-# Getting Started with Create React App
+# PARKDAY TECHNICAL TAKE HOME
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This was an incredibly fun project to take on. It has been some time since I've been able to freely work on a project and enjoy the creative process that goes behind every website, so I thank you for this opportunity.
 
-## Available Scripts
+This project was built using ReactJS and these dependencies:
+- 'papaparse' to parse through and display the CSV
+- 'momentjs' to create a current time var and compare the meal_opt_in_created_date and the current times
+- 'react-router-dom' to create the routing between different pages of the website
+- 'typewriter-effect' to create the fun typewriter style home page
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+My approach to this project was that I would begin by sketching what I wanted my final product to look like, setting a time estimate of about 5 days to complete due to my hefty workload this past week. It ended up taking me from Tuesday to Saturday as expected. Here is what I did each day:
+- Tuesday: I did most of the research and sketching, beginning to visualize the project and how I would attack each problem.
+- Wednesday: I began with the landing page, using the typewriter effect to create a fun and attractive landing page, with a button that would appear at the end of the effect to segway us into the next page.
+- Thursday: I set up the routing between the pages using react-router-dom and created the csvparser page, which using papaparse, takes in a file using a file drop input and displaying, initially, an ugly table.
+- Friday: As mentioned in my daily check in, I didn't have any time to work on the project.
+- Saturday: Saturday morning, I implemented a bulk of the implementation. I began by removing some redundant columns and cleaning up the table. I then proceeded by using momentjs to set find the current time and compare the time. To be continued 
