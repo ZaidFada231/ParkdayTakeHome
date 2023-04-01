@@ -1,9 +1,18 @@
 import React, {useState} from 'react';
 import Papa from "papaparse";
+import CSV_data from "./opt_ins.csv";
+import moment from 'moment';
+import './styles/CsvParser.css';
+
 
 const allowedExtensions = ["csv"];
 
 const CsvParser = () =>{
+  const today = new Date();
+  const NewDate = moment();
+  console.log(NewDate.format('h:mm:ss'));
+
+  var time = today.getHours();
   const [parsedData, setParsedData] = useState([]);
 
   //State to store table Column name
@@ -13,6 +22,7 @@ const CsvParser = () =>{
   const [values, setValues] = useState([]);
 
   const changeHandler = (event) => {
+
     // Passing file data (event.target.files[0]) to parse using Papa.parse
     Papa.parse(event.target.files[0], {
       header: true,
@@ -23,8 +33,16 @@ const CsvParser = () =>{
 
         // Iterating data to get column name and their values
         results.data.map((d) => {
-          rowsArray.push(Object.keys(d));
-          valuesArray.push(Object.values(d));
+          const date = JSON.stringify(d.meal_opt_in_created_date);
+          const [dayHour, weirdHourAdd] = date.split('.');
+          const dayAndHour = JSON.stringify(dayHour);
+          const [dat, time] = dayHour.split(' ');
+
+          console.log(typeof time);
+          if(NewDate.format('h:mm:ss') >= time){
+            rowsArray.push(Object.keys(d));
+            valuesArray.push(Object.values(d));
+          }
         });
 
         // Parsed Data Response in array format
@@ -40,8 +58,7 @@ const CsvParser = () =>{
   };
 
   return (
-    <div>
-      {/* File Uploader */}
+    <div class="background">
       <input
         type="file"
         name="file"
@@ -51,12 +68,19 @@ const CsvParser = () =>{
       />
       <br />
       <br />
-      {/* Table */}
-      <table>
+      <table class="styled-table">
         <thead>
           <tr>
             {tableRows.map((rows, index) => {
-              return <th key={index}>{rows}</th>;
+                if(index !== 0){
+                  if(index !== 1){
+                  if(index !== 5){
+                     if(index !== 6){
+                      return <th key={index}>{rows}</th>;
+                     }
+                   }
+                 }
+               }
             })}
           </tr>
         </thead>
@@ -65,7 +89,15 @@ const CsvParser = () =>{
             return (
               <tr key={index}>
                 {value.map((val, i) => {
-                  return <td key={i}>{val}</td>;
+                     if(i !== 0){
+                       if(i !== 1){
+                       if(i !== 5){
+                         if(i !== 6){
+                          return <td key={i}>{val}</td>;
+                         }
+                       }
+                     }
+                   }
                 })}
               </tr>
             );

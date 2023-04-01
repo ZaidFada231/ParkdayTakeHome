@@ -21,7 +21,7 @@
   background-color: rgba(0, 0, 0, 0);
   touch-action: manipulation;
   position: absolute;
-  top: 50%;
-  left: 41.5%;
-  margin: 50px;
+  margin: -25px 0 0 -50px;
+  left: 50%;
+  top: 60%;
 }
