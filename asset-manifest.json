@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ParkdayTakeHome/static/css/main.637978e1.css",
+    "main.js": "/ParkdayTakeHome/static/js/main.844d13cf.js",
+    "index.html": "/ParkdayTakeHome/index.html",
+    "main.637978e1.css.map": "/ParkdayTakeHome/static/css/main.637978e1.css.map",
+    "main.844d13cf.js.map": "/ParkdayTakeHome/static/js/main.844d13cf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.637978e1.css",
+    "static/js/main.844d13cf.js"
+  ]
+}
