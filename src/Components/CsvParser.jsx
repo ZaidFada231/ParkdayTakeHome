@@ -65,6 +65,7 @@ const CsvParser = () =>{
         style={{ display: "block", margin: "10px auto" }}
       />
       <br />
+      <p> If you have any question on the information below, please email us at vendors@heyParkday.com </p>
       <br />
       <table class="styled-table">
         <thead>

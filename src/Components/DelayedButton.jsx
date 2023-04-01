@@ -8,7 +8,7 @@ function DelayedButton() {
   useEffect(() => {
     setTimeout(() => {
       setShowButton(true);
-    }, 20); //28000
+    }, 28000); //28000
   }, []);
   if(goToCSV){
     let button = document.getElementsByClassName("button-52")[0]; //grab button by using getElementsByClassName
