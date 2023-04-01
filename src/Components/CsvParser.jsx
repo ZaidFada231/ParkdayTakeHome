@@ -1,18 +1,12 @@
 import React, {useState} from 'react';
 import Papa from "papaparse";
-import CSV_data from "./opt_ins.csv";
 import moment from 'moment';
 import './styles/CsvParser.css';
 
-
-const allowedExtensions = ["csv"];
-
 const CsvParser = () =>{
-  const today = new Date();
   const NewDate = moment();
   console.log(NewDate.format('h:mm:ss'));
 
-  var time = today.getHours();
   const [parsedData, setParsedData] = useState([]);
 
   //State to store table Column name
@@ -89,7 +83,7 @@ const CsvParser = () =>{
               <tr key={index}>
                 {value.map((val, i) => { //maping through all the title names
                      if(i !== 0){ // I know this isn't the cleanest bit of code, but using or statement's didn't work so I had to opt for nested if's
-                       if(i !== 1){ //they remove all the redundant/ not neccessary information such as service_id 
+                       if(i !== 1){ //they remove all the redundant/ not neccessary information such as service_id
                        if(i !== 5){
                          if(i !== 6){
                           return <td key={i}>{val}</td>;
