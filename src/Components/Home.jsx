@@ -10,7 +10,7 @@ function Home() {
       <header className="App-header">
       </header>
       <Typewriter
-        onInit = {(typewriter) => {
+        onInit = {(typewriter) => { //typewriter syntax and context
           typewriter
           .typeString("Good morning Mr/Mrs Resturaunt Owner")
           .pauseFor(1000)

@@ -18,7 +18,7 @@ function DelayedButton() {
   }
 
   return (
-    <div>
+    <div> //&& showButton to display it after the setDelay via the use of states 
       {showButton && <button id = "101" class="button-52" onClick ={() =>
         {setGoToCSV(true);}
       }>Lets Go</button>}

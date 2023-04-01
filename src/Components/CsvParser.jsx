@@ -89,7 +89,7 @@ const CsvParser = () =>{
               <tr key={index}>
                 {value.map((val, i) => { //maping through all the title names
                      if(i !== 0){ // I know this isn't the cleanest bit of code, but using or statement's didn't work so I had to opt for nested if's
-                       if(i !== 1){
+                       if(i !== 1){ //they remove all the redundant/ not neccessary information such as service_id 
                        if(i !== 5){
                          if(i !== 6){
                           return <td key={i}>{val}</td>;
