@@ -33,13 +33,11 @@ const CsvParser = () =>{
 
         // Iterating data to get column name and their values
         results.data.map((d) => {
-          const date = JSON.stringify(d.meal_opt_in_created_date);
-          const [dayHour, weirdHourAdd] = date.split('.');
+          const date = JSON.stringify(d.meal_opt_in_created_date); //turning the time/ date element into a string
+          const [dayHour, weirdHourAdd] = date.split('.'); //spliting it up two times till wejust get the hour
           const dayAndHour = JSON.stringify(dayHour);
           const [dat, time] = dayHour.split(' ');
-
-          console.log(typeof time);
-          if(NewDate.format('h:mm:ss') >= time){
+          if(NewDate.format('h:mm:ss') >= time){ //comparing the current time using moment js to the time in the csv
             rowsArray.push(Object.keys(d));
             valuesArray.push(Object.values(d));
           }
@@ -71,8 +69,8 @@ const CsvParser = () =>{
       <table class="styled-table">
         <thead>
           <tr>
-            {tableRows.map((rows, index) => {
-                if(index !== 0){
+            {tableRows.map((rows, index) => { //maping through all the title names
+                if(index !== 0){ // I know this isn't the cleanest bit of code, but using or statement's didn't work so I had to opt for nested if's
                   if(index !== 1){
                   if(index !== 5){
                      if(index !== 6){
@@ -88,8 +86,8 @@ const CsvParser = () =>{
           {values.map((value, index) => {
             return (
               <tr key={index}>
-                {value.map((val, i) => {
-                     if(i !== 0){
+                {value.map((val, i) => { //maping through all the title names
+                     if(i !== 0){ // I know this isn't the cleanest bit of code, but using or statement's didn't work so I had to opt for nested if's
                        if(i !== 1){
                        if(i !== 5){
                          if(i !== 6){

@@ -7,11 +7,12 @@ import Home from "./Home";
 import CsvParser from './CsvParser';
 
 function App() {
+
   return (
     <BrowserRouter>
      <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/csv" element={<CsvParser />} />
+      <Route path="/" element={<Home />} /> //setting up routing using react router dom 
+      <Route path="/csv/:service_id" element={<CsvParser />} />
      </Routes>
     </BrowserRouter>
   );

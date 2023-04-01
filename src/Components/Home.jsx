@@ -12,10 +12,10 @@ function Home() {
       <Typewriter
         onInit = {(typewriter) => {
           typewriter
-          .typeString("Good morning Mr Resturaunt")
+          .typeString("Good morning Mr/Mrs Resturaunt Owner")
           .pauseFor(1000)
           .deleteAll()
-          .typeString("We have data on the numbers of meals we currently have reserved for you.")
+          .typeString("We have data on the meals we currently have reserved for you.")
           .pauseFor(1000)
           .deleteAll()
           .typeString("Ready to see?")
