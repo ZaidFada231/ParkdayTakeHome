@@ -1,11 +1,9 @@
 import React, {useState} from 'react';
 import Papa from "papaparse";
-import CSV_data from "./opt_ins.csv";
 import moment from 'moment';
 import './styles/CsvParser.css';
 
 
-const allowedExtensions = ["csv"];
 
 const CsvParser = () =>{
   const NewDate = moment();
@@ -32,10 +30,8 @@ const CsvParser = () =>{
         results.data.map((d) => {
           const date = JSON.stringify(d.meal_opt_in_created_date);  //turning the time/ date element into a string
           const [dayHour, weirdHourAdd] = date.split('.'); //spliting it up two times till wejust get the hour
-          const dayAndHour = JSON.stringify(dayHour);
           const [dateSplit, time] = dayHour.split(' ');
-          const finalTime = JSON.stringify(time);
-          if(NewDate.format('hh:mm:ss') >= time){ //comparing the current time using moment js to the time in the csv
+          if(NewDate.format('HH:mm:ss') >= time){ //comparing the current time w 24hr clock using moment js to the time in the csv
             rowsArray.push(Object.keys(d));
             valuesArray.push(Object.values(d));
           }
